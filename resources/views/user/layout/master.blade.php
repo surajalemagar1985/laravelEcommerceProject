@@ -69,10 +69,10 @@
           <li><a class="{{Request::is('/about','about')?'active':'' }}"  href="{{route('about')}}">About</a></li>
           <li><a class="{{Request::is('/service','service')?'active':''}}" href="{{route('service')}}">Services</a></li>
           <li><a class="{{Request::is('/portfolio','portfolio')?'active':''}}"  href="{{route('portfolio')}}">Portfolio</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="{{Request::is('/team','team')?'active':''}}" href="{{route('team')}}">Team</a></li>
+          <li><a class="{{Request::is('/pricing','pricing')?'active':''}}"href="{{route('pricing')}}">Pricing</a></li>
+          <li><a class="{{Request::is('/blog','blog')?'active':''}}"href="{{route('blog')}}">Blog</a></li>
+          <li><a href="{{route('contact')}}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
