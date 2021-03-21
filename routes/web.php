@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/index','App\Http\Controllers\UserController@index')->name('index');
 Route::get('/about','App\Http\Controllers\UserController@about')->name('about');
 Route::get('/service','App\Http\Controllers\UserController@service')->name('service');
@@ -29,3 +30,16 @@ Route::get('/contact','App\Http\Controllers\UserController@contact')->name('cont
 
 
 
+
+
+
+///admin controller///
+Route::get('/adminhome','App\Http\Controllers\AdminController@index')->name('adminhome');
+
+
+
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {//got this after installing jetstream//
+    return view('dashboard');
+})->name('dashboard');
